@@ -1,12 +1,11 @@
 package nl.holwerda.lars.homeworksayer;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.Menu;
@@ -17,6 +16,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -37,6 +40,13 @@ public class MainActivity extends AppCompatActivity {
         simpleList = (ListView) findViewById(R.id.simpleListView);
         CustomAdapter customAdapter = new CustomAdapter(getApplicationContext(), translatedlist);
         simpleList.setAdapter(customAdapter);
+        final Button button = (Button) findViewById(R.id.capture_activity);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CameraCaptureActivity.class);
+                startActivity(intent);
+            }
+        });
 
         listener = new UtteranceProgressListener() {
             @Override

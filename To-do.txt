@@ -1,0 +1,5 @@
+To-do list
+- lijsten aan kunnen maken en opslaan
+- lijsten kunnen uploaden
+- van foto naar tekst waar je app een lijst van kan maken
+- design beter

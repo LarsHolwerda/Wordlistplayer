@@ -2,7 +2,7 @@ package nl.holwerda.lars.homeworksayer;
 
 import java.util.Locale;
 
-public class stringsholder {
+public class Stringsholder {
 
     private String localtext = "";
     private String translatedtext = "";

@@ -2,6 +2,8 @@ package nl.holwerda.lars.homeworksayer;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.media.Image;
 import android.os.Bundle;
@@ -35,6 +37,11 @@ import com.google.mlkit.vision.text.TextRecognition;
 import com.google.mlkit.vision.text.TextRecognizer;
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
 
@@ -67,15 +74,17 @@ public class CameraCaptureActivity extends AppCompatActivity {
         }
         return true;
     }
-    private void processText(Text result){
+    private void processText(Text result) throws JSONException, IOException {
         String resultText = result.getText();
         String text = "";
+        ArrayList<String> wordlist = new ArrayList<String>();
         for (Text.TextBlock block : result.getTextBlocks()) {
             String blockText = block.getText();
             for (Text.Line line : block.getLines()) {
                 String lineText = line.getText();
                 for (Text.Element element : line.getElements()) {
                     String elementText = element.getText();
+                    wordlist.add(elementText);
 
                     text = text + "\n" + elementText;
                     Log.v("jaja", elementText);
@@ -83,8 +92,9 @@ public class CameraCaptureActivity extends AppCompatActivity {
             }
         }
 
-        alertDialog.setMessage(text);
-        alertDialog.show();
+        Intent intent = new Intent(this, PreProccessText.class);
+        intent.putExtra("wordlist", wordlist);
+        startActivity(intent);
     }
 
     public void takePicture() {
@@ -101,7 +111,11 @@ public class CameraCaptureActivity extends AppCompatActivity {
                                     .addOnSuccessListener(new OnSuccessListener<Text>() {
                                         @Override
                                         public void onSuccess(Text visionText) {
-                                            processText(visionText);
+                                            try {
+                                                processText(visionText);
+                                            } catch (JSONException | IOException e) {
+                                                e.printStackTrace();
+                                            }
                                         }
                                     })
                                     .addOnFailureListener(

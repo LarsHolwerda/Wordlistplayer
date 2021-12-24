@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Wanne/AndroidStudioProjects/Wordlistplayer/app/src/main/res/layout/CameraCaptureLayout.xml" value="0.1" />
+        <entry key="..\:/Users/Wanne/AndroidStudioProjects/Wordlistplayer/app/src/main/res/layout/activity_listview.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/Wanne/AndroidStudioProjects/Wordlistplayer/app/src/main/res/layout/activity_main.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/Wanne/AndroidStudioProjects/Wordlistplayer/app/src/main/res/layout/activity_pre_proccess_text.xml" value="0.1598731884057971" />
+        <entry key="..\:/Users/Wanne/AndroidStudioProjects/Wordlistplayer/app/src/main/res/layout/camera_capture_layout.xml" value="0.1598731884057971" />
+        <entry key="..\:/Users/Wanne/AndroidStudioProjects/Wordlistplayer/app/src/main/res/layout/content_main.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/Wanne/AndroidStudioProjects/Wordlistplayer/app/src/main/res/layout/frame_layout.xml" value="0.1" />
         <entry key="..\:/Users/lardy/Documents/nuttig/android/app/src/main/res/layout/activity_main.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/lardy/Documents/nuttig/android/app/src/main/res/layout/content_main.xml" value="0.42916666666666664" />
       </map>
@@ -52,7 +59,7 @@
       </value>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

@@ -64,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
 
         initializeDropDown();
 
+        addListWithButton();
+
         InitializeAddWordButton();
 
         initializePlayButton();
@@ -129,6 +131,56 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    private JSONObject arrayListToJsonObject(ArrayList<Stringsholder> inputtranslatedlist) {
+        JSONObject jsonObjectToSave = new JSONObject();
+
+        for (Stringsholder s : inputtranslatedlist) {
+            String localtekst = s.getLocaltext();
+            String translatedtext = s.getTranslatedtext();
+            try {
+                jsonObjectToSave.put(localtekst, translatedtext);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        return jsonObjectToSave;
+    }
+
+    //creeren van een json file van de woordenlijst
+    private void addListWithButton() {
+        Button lijstopslaanbutton = (Button) findViewById(R.id.button4);
+        lijstopslaanbutton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                FileManger fileManger = new FileManger();
+                try {
+                    fileManger.writeFile(getApplicationContext(), "doeffgek", arrayListToJsonObject(translatedlist));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+    }
+
+    //private void initializeAddListButton() {
+
+       // Button createlist = (Button) findViewById(R.id.button1);
+       // createlist.setOnClickListener(new View.OnClickListener() {
+
+        //    @Override
+         //   public void onClick(View view) {
+         //       getApplicationContext();
+         //       addListWithButton(getApplicationContext());
+         //   }
+
+
+      //  });
+  //  }
+
 
     //aanmaken van de dropdown en de items van de files showen in de listview
     private void initializeDropDown() {

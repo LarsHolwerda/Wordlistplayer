@@ -36,5 +36,20 @@
       <option name="name" value="C:\Users\lars\AppData\Local\Android\sdk\extras\android\m2repository" />
       <option name="url" value="file:/$PROJECT_DIR$/../../../../lars/AppData/Local/Android/sdk/extras/android/m2repository" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="D:\android_shit\extras\google\m2repository" />
+      <option name="name" value="D:\android_shit\extras\google\m2repository" />
+      <option name="url" value="file:/D:/android_shit/extras/google/m2repository" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="D:\android_shit\extras\android\m2repository" />
+      <option name="name" value="D:\android_shit\extras\android\m2repository" />
+      <option name="url" value="file:/D:/android_shit/extras/android/m2repository" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="D:\android_shit\extras\m2repository" />
+      <option name="name" value="D:\android_shit\extras\m2repository" />
+      <option name="url" value="file:/D:/android_shit/extras/m2repository" />
+    </remote-repository>
   </component>
 </project>

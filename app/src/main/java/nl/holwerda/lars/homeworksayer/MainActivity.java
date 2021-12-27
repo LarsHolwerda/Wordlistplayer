@@ -167,26 +167,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
     //aanmaken van de dropdown en de items van de files showen in de listview
     private void initializeDropDown() {
         File path = new File("/data/data/nl.holwerda.lars.homeworksayer/files");
         File list[] = path.listFiles();
-        for(    //private void initializeAddListButton() {
-
-        // Button createlist = (Button) findViewById(R.id.button1);
-        // createlist.setOnClickListener(new View.OnClickListener() {
-
-        //    @Override
-        //   public void onClick(View view) {
-        //       getApplicationContext();
-        //       addListWithButton(getApplicationContext());
-        //   }
-
-
-        //  });
-        //  } int i=0; i< list.length; i++)
+        for( int i=0; i< list.length; i++)
         {
             myList.add( list[i].getName() );
         }
@@ -296,8 +281,6 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
-
 
     //laat zien wat er gebeurd als je op het pijltje terug klikt
     @Override

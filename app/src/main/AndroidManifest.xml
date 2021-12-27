@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="nl.holwerda.lars.homeworksayer">
 
+    <uses-feature android:name="android.hardware.camera.any" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,9 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
-            android:label="WordlistPlayer"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".editActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,16 +23,31 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CameraCaptureActivity"
+            android:name=".ListFileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PreProccessText"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
             android:label="WordlistPlayer"
-            >
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddWordActivity"
+            android:label="WordlistPlayer">
 
         </activity>
+        <activity
+            android:name=".CreateFileActivity"
+            android:label="WordlistPlayer"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".CameraCaptureActivity"
+            android:label="WordlistPlayer" />
+
         <meta-data
             android:name="com.google.mlkit.vision.DEPENDENCIES"
             android:value="ocr" />
     </application>
-    <uses-feature android:name="android.hardware.camera.any" />
-    <uses-permission android:name="android.permission.CAMERA" />
 
 </manifest>

@@ -16,11 +16,7 @@
         <activity
             android:name=".editActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".ListFileActivity"
@@ -40,7 +36,13 @@
         <activity
             android:name=".CreateFileActivity"
             android:label="WordlistPlayer"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".CameraCaptureActivity"
             android:label="WordlistPlayer" />

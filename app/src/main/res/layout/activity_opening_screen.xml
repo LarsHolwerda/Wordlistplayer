@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OpeningScreen">
+
+    <Button
+        android:id="@+id/createFilepageButton"
+        android:layout_width="176dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="420dp"
+        android:background="#4565D8"
+        android:text="Create a wordlist"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/EditWordlistButton"
+        android:layout_width="176dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="492dp"
+        android:text="Edit a wordlist"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/RehearseWordlistButton"
+        android:layout_width="174dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="564dp"
+        android:text="Rehearse a wordlist"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/DeleteWordlistButton"
+        android:layout_width="172dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="636dp"
+        android:text="Delete a wordlist"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

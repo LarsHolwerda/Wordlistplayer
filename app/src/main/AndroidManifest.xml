@@ -14,6 +14,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".DeleteFiles"
+            android:exported="true" />
+        <activity
+            android:name=".RehearseWordlist"
+            android:exported="true" />
+        <activity
+            android:name=".OpeningScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".editActivity"
             android:exported="true">
             <intent-filter>
@@ -34,13 +49,11 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".AddWordActivity"
-            android:label="WordlistPlayer">
-
-        </activity>
+            android:label="WordlistPlayer" />
         <activity
             android:name=".CreateFileActivity"
             android:label="WordlistPlayer"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".CameraCaptureActivity"
             android:label="WordlistPlayer" />

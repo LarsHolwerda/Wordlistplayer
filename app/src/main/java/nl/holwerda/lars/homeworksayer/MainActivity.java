@@ -166,27 +166,27 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    //private void initializeAddListButton() {
 
-       // Button createlist = (Button) findViewById(R.id.button1);
-       // createlist.setOnClickListener(new View.OnClickListener() {
-
-        //    @Override
-         //   public void onClick(View view) {
-         //       getApplicationContext();
-         //       addListWithButton(getApplicationContext());
-         //   }
-
-
-      //  });
-  //  }
 
 
     //aanmaken van de dropdown en de items van de files showen in de listview
     private void initializeDropDown() {
         File path = new File("/data/data/nl.holwerda.lars.homeworksayer/files");
         File list[] = path.listFiles();
-        for( int i=0; i< list.length; i++)
+        for(    //private void initializeAddListButton() {
+
+        // Button createlist = (Button) findViewById(R.id.button1);
+        // createlist.setOnClickListener(new View.OnClickListener() {
+
+        //    @Override
+        //   public void onClick(View view) {
+        //       getApplicationContext();
+        //       addListWithButton(getApplicationContext());
+        //   }
+
+
+        //  });
+        //  } int i=0; i< list.length; i++)
         {
             myList.add( list[i].getName() );
         }

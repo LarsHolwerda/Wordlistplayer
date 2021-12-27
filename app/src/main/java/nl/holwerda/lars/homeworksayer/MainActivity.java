@@ -166,21 +166,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    //private void initializeAddListButton() {
-
-       // Button createlist = (Button) findViewById(R.id.button1);
-       // createlist.setOnClickListener(new View.OnClickListener() {
-
-        //    @Override
-         //   public void onClick(View view) {
-         //       getApplicationContext();
-         //       addListWithButton(getApplicationContext());
-         //   }
-
-
-      //  });
-  //  }
-
 
     //aanmaken van de dropdown en de items van de files showen in de listview
     private void initializeDropDown() {
@@ -296,8 +281,6 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
-
 
     //laat zien wat er gebeurd als je op het pijltje terug klikt
     @Override

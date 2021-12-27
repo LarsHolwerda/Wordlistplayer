@@ -2,6 +2,7 @@ package nl.holwerda.lars.homeworksayer;
 
 import android.content.Context;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -11,14 +12,48 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
 
 public class FileManger {
+    public ArrayList<AdapterRecyclerItem> jsonToArrayListObjects(JSONObject jsonData) throws JSONException {
+        JSONArray keys = jsonData.names();
+        ArrayList<AdapterRecyclerItem> adapterRecyclerItems = new ArrayList<>();
 
+        if (keys != null) {
+            for (int i = 0; i < keys.length(); i++) {
+
+                String key = keys.getString (i);
+                String value = jsonData.getString (key);
+
+                adapterRecyclerItems.add(new AdapterRecyclerItem(key, value));
+            }
+        }
+        return adapterRecyclerItems;
+    }
+
+    public JSONObject ArrayListObjectsToJson(ArrayList<AdapterRecyclerItem> arrayListData) throws JSONException {
+        JSONObject jsonObject = new JSONObject();
+        for (int i = 0; i < arrayListData.size(); i++){
+            AdapterRecyclerItem item = arrayListData.get(i);
+            jsonObject.put(item.wordFrom,item.wordTo);
+        }
+        return jsonObject;
+    }
+
+
+    private String changeExtension(String fileName){
+        if (!fileName.contains(".json")){
+            fileName = fileName + ".json";
+        }
+        return fileName;
+    }
     private Boolean checkFileExistence(File file){
         return file.exists();
     }
+
     public void deleteFile(Context context, String fileName) throws IOException {
+        fileName = changeExtension(fileName);
         File file = new File(context.getFilesDir(), fileName);
         Boolean existence = this.checkFileExistence(file);
         if (!existence) {
@@ -28,7 +63,7 @@ public class FileManger {
     }
 
     public void writeFile(Context context, String fileName, JSONObject jsonData) throws IOException {
-
+        fileName = changeExtension(fileName);
         File file = new File(context.getFilesDir(), fileName);
         Boolean existence = this.checkFileExistence(file);
         if (existence) {
@@ -40,6 +75,7 @@ public class FileManger {
         bufferedWriter.close();
     }
     public JSONObject readFile(Context context, String fileName) throws IOException, JSONException {
+        fileName = changeExtension(fileName);
         File file = new File(context.getFilesDir(),fileName);
         Boolean existence = this.checkFileExistence(file);
         if (!existence) {
@@ -59,6 +95,7 @@ public class FileManger {
     }
 
     public void updateFile(Context context, String fileName, JSONObject jsonData) throws IOException, JSONException {
+        fileName = changeExtension(fileName);
         JSONObject original_object = this.readFile(context,fileName);
         this.deleteFile(context,fileName);
         JSONObject merged = new JSONObject();

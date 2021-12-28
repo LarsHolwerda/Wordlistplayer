@@ -9,8 +9,11 @@ import android.widget.Button;
 
 public class OpeningScreen extends AppCompatActivity {
 
-    private void switchIntent(Class<?> intentClass){
+    private void switchIntent(Class<?> intentClass, String extra){
         Intent intent = new Intent(this,intentClass);
+        if(!extra.equals("")){
+            intent.putExtra("goToActivity",extra);
+        }
         startActivity(intent);
     }
 
@@ -26,28 +29,28 @@ public class OpeningScreen extends AppCompatActivity {
         CreateFilepageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switchIntent(CreateFileActivity.class);
+                switchIntent(CreateFileActivity.class,"");
             }
         });
 
         EditWordlistButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switchIntent(editActivity.class);
+                switchIntent(ChooseFileActivity.class,"edit");
             }
         });
 
         RehearseWordlistButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switchIntent(RehearseWordlist.class);
+                switchIntent(ChooseFileActivity.class,"rehearse");
             }
         });
 
         DeleteWordlistButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switchIntent(DeleteFiles.class);
+                switchIntent(DeleteFiles.class,"");
             }
         });
     }

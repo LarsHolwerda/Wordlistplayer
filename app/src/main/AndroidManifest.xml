@@ -5,7 +5,11 @@
     <uses-feature android:name="android.hardware.camera.any" />
 
     <uses-permission android:name="android.permission.CAMERA" />
-
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+    </queries>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,7 +22,10 @@
             android:exported="true" />
         <activity
             android:name=".RehearseWordlist"
-            android:exported="true" />
+            android:exported="true">
+
+
+        </activity>
         <activity
             android:name=".OpeningScreen"
             android:exported="true">
@@ -27,15 +34,12 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
-            android:name=".editActivity"
+            android:name=".ChooseFileActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".ListFileActivity"

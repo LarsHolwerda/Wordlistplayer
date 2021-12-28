@@ -11,9 +11,8 @@ import android.widget.Button;
 import android.widget.Spinner;
 
 import java.io.File;
-import java.util.ArrayList;
 
-public class editActivity extends AppCompatActivity{
+public class ChooseFileActivity extends AppCompatActivity{
     String filename = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,16 +20,27 @@ public class editActivity extends AppCompatActivity{
         setContentView(R.layout.activity_edit);
 
         Spinner spinner = (Spinner) findViewById(R.id.dropdown);
-        Button editButton = (Button) findViewById(R.id.editButton);
+        Button button = (Button) findViewById(R.id.editButton);
+
+        Intent intent_from = getIntent();
+        String goToActivity = intent_from.getStringExtra("goToActivity");
+
+        button.setText(goToActivity);
 
 
 
-        editButton.setOnClickListener(new View.OnClickListener(){
+        button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 if (!filename.equals("")){
-                    Intent intent = new Intent(editActivity.this,AddWordActivity.class);
-                    intent.putExtra("filename", filename); //Optional parameters
+                    Intent intent;
+                    if (goToActivity.equals("edit")) {
+                        intent = new Intent(ChooseFileActivity.this, AddWordActivity.class);
+                    }
+                    else{
+                        intent = new Intent(ChooseFileActivity.this, RehearseWordlist.class);
+                    }
+                    intent.putExtra("filename", filename);
                     startActivity(intent);
                 }
             }

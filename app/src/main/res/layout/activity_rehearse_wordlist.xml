@@ -6,11 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".RehearseWordlist">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Doe het ff heee"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="303dp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecycleViewWords"
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

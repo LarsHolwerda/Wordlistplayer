@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
@@ -38,7 +39,7 @@ public class AdapterRecycler extends RecyclerView.Adapter<AdapterRecycler.ViewHo
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView wordFrom;
         private TextView wordTo;
-        private Button delete;
+        private ImageButton delete;
 
         public ViewHolder(View view) {
             super(view);
@@ -46,7 +47,7 @@ public class AdapterRecycler extends RecyclerView.Adapter<AdapterRecycler.ViewHo
 
             wordFrom = (TextView) view.findViewById(R.id.wordFrom);
             wordTo = (TextView) view.findViewById(R.id.wordTo);
-            delete = (Button) view.findViewById(R.id.delete);
+            delete = (ImageButton) view.findViewById(R.id.delete);
 
         }
 
@@ -56,7 +57,7 @@ public class AdapterRecycler extends RecyclerView.Adapter<AdapterRecycler.ViewHo
         public TextView getWordTo() {
             return wordTo;
         }
-        public Button getDelete() {
+        public ImageButton getDelete() {
             return delete;
         }
     }

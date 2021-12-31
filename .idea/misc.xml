@@ -3,11 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Wanne/AndroidStudioProjects/Wordlistplayer/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Wanne/AndroidStudioProjects/Wordlistplayer/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Wanne/AndroidStudioProjects/Wordlistplayer/app/src/main/res/drawable/test_2_background.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Wanne/AndroidStudioProjects/Wordlistplayer/app/src/main/res/drawable/test_2_foreground.xml" value="0.3484375" />
         <entry key="..\:/Users/Wanne/AndroidStudioProjects/Wordlistplayer/app/src/main/res/layout/activity_edit.xml" value="0.2695035460992908" />
         <entry key="..\:/Users/Wanne/AndroidStudioProjects/Wordlistplayer/app/src/main/res/layout/activity_pre_proccess_text.xml" value="0.245018115942029" />
         <entry key="..\:/Users/Wanne/AndroidStudioProjects/Wordlistplayer/app/src/main/res/layout/activity_rehearse_wordlist.xml" value="0.245018115942029" />
         <entry key="..\:/Users/Wanne/AndroidStudioProjects/Wordlistplayer/app/src/main/res/layout/adapter_recycler_item.xml" value="0.2563405797101449" />
         <entry key="..\:/Users/Wanne/AndroidStudioProjects/Wordlistplayer/app/src/main/res/layout/adapter_recycler_item_rehearse.xml" value="0.33" />
+        <entry key="..\:/Users/Wanne/AndroidStudioProjects/Wordlistplayer/app/src/main/res/layout/test.xml" value="0.245018115942029" />
+        <entry key="..\:/Users/Wanne/AndroidStudioProjects/Wordlistplayer/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3484375" />
+        <entry key="..\:/Users/Wanne/AndroidStudioProjects/Wordlistplayer/app/src/main/res/mipmap-anydpi-v26/test.xml" value="0.3484375" />
         <entry key="..\:/Users/lardy/Documents/nuttig/android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.4453125" />
         <entry key="..\:/Users/lardy/Documents/nuttig/android/app/src/main/res/drawable/ic_launcher_background.xml" value="0.4453125" />
         <entry key="..\:/Users/lardy/Documents/nuttig/android/app/src/main/res/layout/activity_add_word.xml" value="0.42916666666666664" />
